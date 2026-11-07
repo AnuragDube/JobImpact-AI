@@ -42,11 +42,13 @@ Sentence-BERT loads `sentence-transformers/all-MiniLM-L6-v2` on CPU. The first l
 
 `evaluation/test_dataset.csv` is an illustrative manually labelled class exercise. Its labels are not an external ground truth or occupational research dataset. Run `python -m evaluation.evaluate --demo` to measure the rule-based fallback, or omit `--demo` with a Gemini key to evaluate live model predictions. Record the mode and date when reporting results. The demo rules were developed alongside this small teaching dataset, so scores are descriptive only and are not an unbiased estimate of generalization.
 
-## Deployment: Hugging Face Spaces
+## Deployment: Streamlit Community Cloud
 
-Create a Streamlit Space, upload the repository, and add `GEMINI_API_KEY` and optionally `GEMINI_MODEL` under Space Settings → Variables and secrets. The repository includes `requirements.txt`, `packages.txt`, and this README. CPU startup downloads the Sentence-BERT model; allow sufficient build and startup time. Do not add credentials to Git.
+**Live app:** https://jobimpact-ai-anurag.streamlit.app/
 
-GitHub repository creation, pushing and deployment have not been performed. Add the authorized repository URL and live app URL here only after those actions are approved and verified.
+The app is deployed from the public [`AnuragDube/JobImpact-AI`](https://github.com/AnuragDube/JobImpact-AI) repository, branch `main`, with `app.py` as its entry point. The first deployment may take several minutes while the Python dependencies are installed.
+
+To use Gemini, enter a key in the password field in the app sidebar. A key entered there is used for that browser session. To configure a default key for the hosted app, add `GEMINI_API_KEY` under the app's Streamlit Cloud settings → Secrets. Optionally set `GEMINI_MODEL` there as well. Never commit API keys to Git or put them in source code. Without a configured key, the app clearly labels its illustrative demo outputs.
 
 ## Documentation
 
