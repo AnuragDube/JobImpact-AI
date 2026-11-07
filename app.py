@@ -28,6 +28,12 @@ html,body,[class*="css"]{font-family:'DM Sans',sans-serif;color:var(--ink)}
 [data-testid="stSidebar"] *{color:#e8edf7} [data-testid="stSidebar"] [data-testid="stMarkdownContainer"] p{color:#aab6ca}
 [data-testid="stSidebar"] [data-testid="stRadio"] label{padding:.45rem .6rem;border-radius:9px;font-weight:500}
 [data-testid="stSidebar"] [data-testid="stRadio"] label:hover{background:#ffffff12}
+[data-testid="stMain"]{color:#162238!important;background:#f5f7fb!important}
+[data-testid="stMain"] p,[data-testid="stMain"] label,[data-testid="stMain"] h1,[data-testid="stMain"] h2,[data-testid="stMain"] h3,[data-testid="stMain"] h4,[data-testid="stMain"] li,[data-testid="stMain"] summary,[data-testid="stMain"] [data-testid="stMarkdownContainer"]{color:#26344a!important;-webkit-text-fill-color:#26344a!important}
+[data-testid="stMain"] [data-testid="stCaptionContainer"] p{color:#66748a!important;-webkit-text-fill-color:#66748a!important}
+[data-testid="stMain"] [data-testid="stAlert"]{background:#eef3ff!important;border:1px solid #d9e2fb!important}
+[data-testid="stMain"] [data-testid="stAlert"] *{color:#33435b!important;-webkit-text-fill-color:#33435b!important}
+[data-testid="stMain"] [data-testid="stExpander"]{background:#fff!important;border:1px solid #e4e9f1!important;border-radius:12px}
 .block-container{max-width:1400px;padding:1.25rem 2.2rem 4rem}
 h1,h2,h3{font-family:'Manrope',sans-serif;letter-spacing:-.035em;color:var(--ink)}
 .brand{display:flex;align-items:center;gap:12px;padding:.3rem .15rem 1.4rem}
