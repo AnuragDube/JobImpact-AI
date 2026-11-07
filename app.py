@@ -133,7 +133,7 @@ def exposure_chart():
     frame = pd.DataFrame(state["classifications"])
     counts = frame.label.value_counts().reindex(["Automate","Augment","Human-led"], fill_value=0).rename_axis("Exposure").reset_index(name="Tasks")
     chart = px.pie(counts, names="Exposure", values="Tasks", hole=.72, color="Exposure", color_discrete_map={"Automate":"#6177eb","Augment":"#eaa94c","Human-led":"#42ae91"})
-    chart.update_traces(textposition="inside", textinfo="value", marker=dict(line=dict(color="#fff",width=3)))
+    chart.update_traces(textposition="inside", textinfo="none", marker=dict(line=dict(color="#fff",width=3)))
     chart.update_layout(showlegend=False, margin=dict(l=8,r=8,t=12,b=8), paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)", font=dict(family="DM Sans",color="#38465d"), height=280, annotations=[dict(text=f"{len(frame)}<br><sup>tasks</sup>",x=.5,y=.5,showarrow=False,font=dict(size=22,color="#17243c"))])
     return chart, counts
 
