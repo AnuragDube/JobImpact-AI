@@ -61,6 +61,7 @@ h1,h2,h3{font-family:'Manrope',sans-serif;letter-spacing:-.035em;color:var(--ink
 .badge-auto{background:#eaf0ff;color:#425bc8}.badge-augment{background:#fff3dd;color:#a86c13}.badge-human{background:#e7f7f1;color:#168365}
 div.stButton>button,div.stFormSubmitButton>button{border-radius:10px;border:1px solid #5269e8;background:#5269e8;color:#fff!important;-webkit-text-fill-color:#fff!important;font-weight:700;min-height:42px;box-shadow:0 6px 14px #5269e82b}
 [data-testid="stMain"] div.stButton>button span,[data-testid="stMain"] div.stFormSubmitButton>button span,[data-testid="stMain"] [data-testid="stDownloadButton"] button span{color:#fff!important;-webkit-text-fill-color:#fff!important}
+[data-testid="stMain"] div.stButton>button *,[data-testid="stMain"] div.stFormSubmitButton>button *,[data-testid="stMain"] [data-testid="stDownloadButton"] button *{color:#fff!important;-webkit-text-fill-color:#fff!important}
 div.stButton>button:hover,div.stFormSubmitButton>button:hover{border-color:#4057d4;background:#4057d4;color:white;transform:translateY(-1px)}
 div[data-testid="stDownloadButton"]>button{border-radius:10px;font-weight:700}
 div[data-testid="stDownloadButton"]>button{background:#5269e8!important;color:#fff!important;border-color:#5269e8!important}
