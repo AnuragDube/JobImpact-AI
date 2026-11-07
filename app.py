@@ -53,11 +53,12 @@ div.stButton>button,div.stFormSubmitButton>button{border-radius:10px;border:1px 
 div.stButton>button:hover,div.stFormSubmitButton>button:hover{border-color:#4057d4;background:#4057d4;color:white;transform:translateY(-1px)}
 div[data-testid="stDownloadButton"]>button{border-radius:10px;font-weight:700}
 div[data-testid="stDownloadButton"]>button{background:#5269e8!important;color:#fff!important;border-color:#5269e8!important}
-section.main div[data-testid="stTextArea"] textarea,section.main div[data-testid="stTextInput"] input{border:1px solid #d9e0eb;border-radius:11px;background:#fff!important;color:#17243c!important;-webkit-text-fill-color:#17243c!important}
-section.main div[data-testid="stTextArea"] textarea::placeholder,section.main div[data-testid="stTextInput"] input::placeholder{color:#768399!important;-webkit-text-fill-color:#768399!important;opacity:1!important}
-section.main div[data-testid="stTextArea"] textarea:focus,section.main div[data-testid="stTextInput"] input:focus{border-color:#7181f0;box-shadow:0 0 0 3px #5269e81c}
-section.main div[data-testid="stCheckbox"] label,section.main div[data-testid="stCheckbox"] label p{color:#35445a!important;-webkit-text-fill-color:#35445a!important;opacity:1!important}
-section.main [data-testid="stCaptionContainer"] p{color:#66748a!important;-webkit-text-fill-color:#66748a!important}
+textarea,input[type="text"],input[type="password"]{border:1px solid #d9e0eb!important;border-radius:11px!important;background:#fff!important;color:#17243c!important;-webkit-text-fill-color:#17243c!important;caret-color:#17243c!important}
+textarea::placeholder,input::placeholder{color:#768399!important;-webkit-text-fill-color:#768399!important;opacity:1!important}
+textarea:focus,input:focus{border-color:#7181f0!important;box-shadow:0 0 0 3px #5269e81c!important}
+div[data-testid="stCheckbox"] label,div[data-testid="stCheckbox"] label p,div[data-testid="stCheckbox"] label span{color:#35445a!important;-webkit-text-fill-color:#35445a!important;opacity:1!important}
+[data-testid="stCaptionContainer"] p{color:#66748a!important;-webkit-text-fill-color:#66748a!important}
+[data-testid="stForm"]{border:0!important;padding:0!important;background:transparent!important}
 div[data-testid="stDataFrame"]{border:1px solid var(--line);border-radius:12px;overflow:hidden} hr{border-color:var(--line)}
 @media(max-width:750px){.block-container{padding:1rem 1rem 3rem}.hero{padding:1.4rem}.hero:after{display:none}}
 </style>
