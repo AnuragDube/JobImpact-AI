@@ -7,6 +7,7 @@ import plotly.express as px
 import streamlit as st
 
 from config.settings import APP_NAME, GEMINI_MODEL
+from utils.llm_client import api_key
 from utils.validators import validate_job_input
 from modules.job_decomposition import decompose, decomposition_prompt
 from modules.task_classification import classify
@@ -22,7 +23,7 @@ st.markdown("""
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
 :root{--ink:#162238;--muted:#68758b;--line:#e4e9f1;--paper:#f5f7fb;--blue:#5269e8}
 html,body,[class*="css"]{font-family:'DM Sans',sans-serif;color:var(--ink)}
-.stApp{background:var(--paper)} [data-testid="stHeader"]{background:rgba(245,247,251,.85);height:2.8rem}
+.stApp{background:var(--paper)} [data-testid="stHeader"]{background:#f5f7fb!important;opacity:1;height:2.8rem}
 [data-testid="stSidebar"]{background:linear-gradient(180deg,#111c31,#15233d);border-right:1px solid #ffffff12}
 [data-testid="stSidebar"] *{color:#e8edf7} [data-testid="stSidebar"] [data-testid="stMarkdownContainer"] p{color:#aab6ca}
 [data-testid="stSidebar"] [data-testid="stRadio"] label{padding:.45rem .6rem;border-radius:9px;font-weight:500}
@@ -52,8 +53,11 @@ div.stButton>button,div.stFormSubmitButton>button{border-radius:10px;border:1px 
 div.stButton>button:hover,div.stFormSubmitButton>button:hover{border-color:#4057d4;background:#4057d4;color:white;transform:translateY(-1px)}
 div[data-testid="stDownloadButton"]>button{border-radius:10px;font-weight:700}
 div[data-testid="stDownloadButton"]>button{background:#5269e8!important;color:#fff!important;border-color:#5269e8!important}
-div[data-testid="stTextArea"] textarea,div[data-testid="stTextInput"] input{border:1px solid #d9e0eb;border-radius:11px;background:#fff}
-div[data-testid="stTextArea"] textarea:focus,div[data-testid="stTextInput"] input:focus{border-color:#7181f0;box-shadow:0 0 0 3px #5269e81c}
+section.main div[data-testid="stTextArea"] textarea,section.main div[data-testid="stTextInput"] input{border:1px solid #d9e0eb;border-radius:11px;background:#fff!important;color:#17243c!important;-webkit-text-fill-color:#17243c!important}
+section.main div[data-testid="stTextArea"] textarea::placeholder,section.main div[data-testid="stTextInput"] input::placeholder{color:#768399!important;-webkit-text-fill-color:#768399!important;opacity:1!important}
+section.main div[data-testid="stTextArea"] textarea:focus,section.main div[data-testid="stTextInput"] input:focus{border-color:#7181f0;box-shadow:0 0 0 3px #5269e81c}
+section.main div[data-testid="stCheckbox"] label,section.main div[data-testid="stCheckbox"] label p{color:#35445a!important;-webkit-text-fill-color:#35445a!important;opacity:1!important}
+section.main [data-testid="stCaptionContainer"] p{color:#66748a!important;-webkit-text-fill-color:#66748a!important}
 div[data-testid="stDataFrame"]{border:1px solid var(--line);border-radius:12px;overflow:hidden} hr{border-color:var(--line)}
 @media(max-width:750px){.block-container{padding:1rem 1rem 3rem}.hero{padding:1.4rem}.hero:after{display:none}}
 </style>
@@ -72,7 +76,7 @@ with st.sidebar:
     st.markdown('<div class="side-label">Gemini connection</div>', unsafe_allow_html=True)
     st.text_input("Gemini API key", type="password", placeholder="Paste your API key", key="gemini_key_input", help="Used for this session only. Or set GEMINI_API_KEY in .env or Streamlit secrets.")
     st.text_input("Model ID", value=st.session_state.get("gemini_model_input", GEMINI_MODEL), key="gemini_model_input")
-    has_key = bool(st.session_state.get("gemini_key_input", ""))
+    has_key = bool(api_key())
     st.markdown(f'<div class="status-pill"><span class="status-dot"></span>{"Key ready for this session" if has_key else "Demo mode · add a key to enable Gemini"}</div>', unsafe_allow_html=True)
     st.markdown("<div style='height:18px'></div>", unsafe_allow_html=True)
     st.markdown('<div class="small-note" style="color:#8291a8">P59 · Track E: Responsible AI<br>Task-level analysis with human oversight</div>', unsafe_allow_html=True)
