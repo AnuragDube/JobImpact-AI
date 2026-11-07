@@ -1,0 +1,20 @@
+role,task,reference_label
+Software Developer,Format source code using a standard formatter,Automate
+Software Developer,Generate boilerplate for a simple API endpoint,Automate
+Software Developer,Review a security-sensitive authentication change,Human-led
+Software Developer,Generate boilerplate for a security-sensitive authentication flow,Human-led
+Software Developer,Discuss trade-offs with product and engineering teams,Human-led
+Software Developer,Write and run unit tests for a code change,Augment
+Software Developer,Investigate an intermittent production failure,Augment
+Data Analyst,Run a scheduled query and export a standard report,Automate
+Data Analyst,Remove duplicate rows using established validation rules,Automate
+Data Analyst,Explain an unexpected revenue change to leadership,Human-led
+Data Analyst,Choose an appropriate statistical approach for a new question,Human-led
+Data Analyst,Build a dashboard from a clean documented dataset,Augment
+Data Analyst,Investigate conflicting metrics across source systems,Augment
+Digital Marketing Specialist,Resize campaign images to approved dimensions,Automate
+Digital Marketing Specialist,Schedule approved posts using a content calendar,Automate
+Digital Marketing Specialist,Negotiate campaign direction with a client,Human-led
+Digital Marketing Specialist,Make a final brand-sensitive response to a public crisis,Human-led
+Digital Marketing Specialist,Draft alternative ad copy for editor review,Augment
+Digital Marketing Specialist,Analyze campaign performance and suggest experiments,Augment
