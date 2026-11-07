@@ -12,7 +12,7 @@ pinned: false
 
 # JobImpact AI
 
-**P59 · Job Task Exposure Analyzer · Track E: Responsible AI**  
+**P59 · Job Task Exposure Analyzer · Track E: Responsible AI**
 Anurag Chotulal Dube · Roll 59 · MIT ADT University · B.Tech Computer Science Engineering
 
 JobImpact AI decomposes a job into responsibilities and examines which tasks may be automatable, AI-augmented, or human-led. It also connects tasks to professional skills, supports a self-rated skill-gap review, and produces a staged reskilling roadmap. Results are exploratory and require human review.

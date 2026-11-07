@@ -1,9 +1,9 @@
 # 59_Anurag_Chotulal_Dube_P59
 
 ## Cover page
-**JobImpact AI: Job Task Exposure Analyzer**  
-P59 · Track E: Responsible AI  
-Anurag Chotulal Dube · Roll 59  
+**JobImpact AI: Job Task Exposure Analyzer**
+P59 · Track E: Responsible AI
+Anurag Chotulal Dube · Roll 59
 MIT ADT University · B.Tech Computer Science Engineering
 
 ## Problem statement and objective

@@ -129,4 +129,3 @@ elif page=="Technical About":
     x=np.linspace(-3,3,250); y=np.exp(-x*x/2)/np.sqrt(2*np.pi)
     st.plotly_chart(px.area(x=x,y=y,labels={"x":"Latent variable (conceptual)","y":"Density"},title="Illustrative latent-variable distribution"),use_container_width=True)
     st.markdown("**PyTorch:** Sentence Transformers runs a pretrained transformer through its PyTorch backend where installed; this project does not train or fine-tune model weights.")
-
